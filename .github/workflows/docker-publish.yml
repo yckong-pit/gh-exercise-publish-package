@@ -11,6 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file sample-packages/Dockerfile --tag ${{ github.repository }}:$(date +%s)
+      run: |
+        pwd
+        docker build . --file sample-packages/docker/Dockerfile --tag ${{ github.repository }}:$(date +%s)
 
 
