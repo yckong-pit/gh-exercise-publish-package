@@ -26,7 +26,7 @@ jobs:
     - name: Push Docker Image
       run: |
         docker images
-        docker ps -ef
+        docker ps -a
         docker push ghcr.io/${{ github.repository }}:latest
 
 
