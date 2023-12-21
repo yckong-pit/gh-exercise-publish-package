@@ -18,7 +18,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v3
     - uses: docker/login-action@v1
       with:
         registry: ghcr.io
