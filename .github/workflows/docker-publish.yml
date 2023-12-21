@@ -18,7 +18,7 @@ jobs:
     - name: Build the Docker image
       run: |
         pwd
-        docker build . --file sample-packages/docker/Dockerfile --tag ${{ github.repository }}:latest
+        docker build . --file sample-packages/docker/Dockerfile --tag ghcr.io/${{ github.repository }}:latest
     - name: Push Docker Image
       run: |
         docker images
