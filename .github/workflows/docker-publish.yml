@@ -24,7 +24,7 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GH_REGISTRY_TOKEN }}
     - name: Push Docker Image
-    - run: docker push ghcr.io/${{ github.repository }}:$(date +%s) 
+      run: docker push ghcr.io/${{ github.repository }}:$(date +%s) 
 
 
 
